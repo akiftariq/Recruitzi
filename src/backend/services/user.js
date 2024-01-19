@@ -1,6 +1,6 @@
-import * as db from './db.js';
+import * as db from '../db/db.js';
 import bcrypt from 'bcrypt';
-import config from './config.js';
+import config from '../config.js';
 
 export const getUsers = async (req, res) => {
 	const dbRes = await db.query('SELECT * from users');

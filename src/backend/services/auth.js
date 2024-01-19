@@ -1,6 +1,6 @@
-import * as db from './db.js';
+import * as db from '../db/db.js';
 import jwt from 'jsonwebtoken';
-import config from './config.js';
+import config from '../config.js';
 import bcrypt from 'bcrypt';
 
 export const authenticate = (req, res, next) => {
