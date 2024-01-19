@@ -13,6 +13,6 @@ app.put('/api/user', auth.authenticate, userRepository.updateUser);
 
 app.post('/api/login', auth.login);
 
-app.listen(config.appPort, function () {
+app.listen(config.appPort, () => {
 	console.log('Server listining on port 3000');
 });

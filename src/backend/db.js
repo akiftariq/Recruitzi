@@ -1,5 +1,6 @@
 import pg from 'pg';
 import config from './config.js';
+
 const Pool = pg.Pool;
 
 const pool = new Pool({
@@ -10,4 +11,10 @@ const pool = new Pool({
 	password: config.dbPassword
 });
 
-export default pool;
+export const query = async (text, params) => {
+	const start = Date.now();
+	const res = await pool.query(text, params);
+	const duration = Date.now() - start;
+	if (config.logDbQueries) console.log('executed query', { text, params, duration, rows: res.rowCount });
+	return res;
+};

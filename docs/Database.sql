@@ -1,10 +1,12 @@
-create table if not exists users(
-id SERIAL primary key,
-	firstName VARCHAR(255),
-	lastName VARCHAR(255),
-	DOB VARCHAR(50),
-	cell VARCHAR(50),
-	email VARCHAR(50),
+drop table if exists public.users;
+
+create table if not exists public.users(
+	id SERIAL primary key not null,
+	firstName VARCHAR(255) not null,
+	lastName VARCHAR(255) not null,
+	DOB VARCHAR(50) not null,
+	cell VARCHAR(50) null,
+	email VARCHAR(50) not null,
 	"password" VARCHAR(50)
 );
 
@@ -13,3 +15,4 @@ INSERT INTO public.users
 VALUES('firstname usr1', 'lastname usr1', '01-01-2000', '1234567', 'usr1@example.com', 'password123');
 
 
+select * from public.users;
