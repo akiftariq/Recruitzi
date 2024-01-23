@@ -1,0 +1,46 @@
+Node:
+	Purpose of Node.
+	Installation of Node.
+	Execute javascript code/files with Node. (using node command)
+
+NPM:
+	Purpose of npm.
+	Executing basic commands of npm to install packages like npm install
+	Difference between npm install --save and npm install --save-dev
+
+HTTP:
+	We are using HTTP protocol for our communication between browser and backend api.
+	HTTP methods (GET, POST, PUT, DELETE etc.)
+	HTTP Status Codes (200, 401, 404 etc.)
+	HTTP Request and Response and their headers.
+
+ExpressJS:
+	Purpose of Express JS
+	Routing in Express JS (https://expressjs.com/en/guide/routing.html)
+	Processing of HTTP Requests in ExpressJS (req parameter)
+	Sending HTTP Response (res parameter)
+	Reading headers of HTTP Requests (We read authenticate header in authenticate menthod of auth.js (line#: 7))
+	Express middlewares: We used the concepts of middlewares to add the check of authentication in most of the routes like in (app.get('/api/user', auth.authenticate, userRepository.getUsers);) (https://expressjs.com/en/guide/using-middleware.html)
+
+Rest API and Microservices:
+	Purpose of RESTful APIs.
+	Restful APIs help us build applications using Microservice Architecture. (https://www.youtube.com/watch?v=lTAcCNbJ7KE)
+	What are other protocols for building APIs to build applications (https://www.youtube.com/watch?v=4vLxWqE94l4)
+
+JWT:
+	https://www.youtube.com/watch?v=P2CPd9ynFLg
+
+Relational Database:
+	Postgres (installation).
+	Basic DML OR CRUD queries like SELECT INSERT DELETE UPDATE.
+	Basic DDL queries like CREATE DATABASE, DROP DATABASE, CREATE TABLE, DROP TABLE, and ALTER TABLE etc.
+	Understanding of Primary Key, Forign Key.
+	Postgres' datatypes of columns.
+	Types of relation-ships between tables: One-to-Many, One-to-One, Many-to-Many.
+	Adding UNIQUE constraints for columns in a table.
+	Setting columns as NOT NULLABLE.
+
+Using thirdparty libraries in Node:
+	We used express, pg, bcrypt and jsonwebtoken. (Each of these libraries had a specific functionality that we need to use in our code).
+	Installation of packages or thirdparty libraries in our project using npm which we need to use in our code.
+	using import statement to use the thirdparty in our code.
