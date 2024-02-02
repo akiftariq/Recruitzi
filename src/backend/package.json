@@ -10,7 +10,7 @@
 	"scripts": {
 		"format": "prettier --write ./ && eslint ./ --fix",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-db": "node ./migrations.js"
+		"migrations": "node ./migrations.js -d ./migrations"
 	},
 	"author": "Yousaf",
 	"license": "ISC",
